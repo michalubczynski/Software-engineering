@@ -37,12 +37,23 @@ public class Solver {
     public double[] solve() {
 
         double[] results = null;
+        if(a==0){
+            throw new IllegalArgumentException("To nie rownanie kwadratowe");
+        }
         double delta = delta(a,b,c);
         if(delta>0){
             results = new double [] {(-b - Math.sqrt(delta)) / (2*a),(-b + Math.sqrt(delta)) / (2*a)};
         }
         else if ( delta ==0){ results = new double [] {-b/(2*a)};}
     return results;
+    }
+    public double simpleFunction(){
+        if(a<0 || b<0){
+            throw new IllegalArgumentException("obie liczby musza byc dodatnie w simpleFunction");
+        }
+        else {
+            return a*b;
+        }
     }
 
     private double delta(double a, double b, double c) {return b*b -4 *a *c;   }

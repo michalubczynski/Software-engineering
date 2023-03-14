@@ -1,3 +1,5 @@
+package PasswordComplexityPolicyMLTest;
+
 import PaswordComplexityPolicy.PasswordComplexityPolicyML;
 import org.junit.Test;
 
