@@ -11,8 +11,8 @@ public class PasswordComplexityPolicyML {
             if(Character.isDigit(password.charAt(i)))digitCount++;
         }
         boolean result = true;
-        if(pwdLength < MIN_LENGTH) {result = false;}
-        if( digitCount < MIN_DIGITS) {result = false;}
+        if(pwdLength < MIN_LENGTH) { throw new IllegalArgumentException();}
+        if( digitCount < MIN_DIGITS) { throw  new IllegalArgumentException();}
         return result;
     }
 }
