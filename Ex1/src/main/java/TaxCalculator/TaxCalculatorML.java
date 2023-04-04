@@ -3,6 +3,10 @@ package TaxCalculator;
 public class TaxCalculatorML {
     public  double calculateTax(double amount){
         double tax;
+        try{Thread.sleep(1000);}
+        catch (InterruptedException ex){
+
+        }
         if(amount <= 3091d){
             tax = 0;
         }
@@ -13,5 +17,6 @@ public class TaxCalculatorML {
 
 
         return tax;
+
     }
 }
