@@ -13,38 +13,29 @@ public class Kwiat {
         this.nazwa = nazwa;
         this.rokOdkrycia = rokOdkrycia;
     }
-
-    public Kwiat() {
-
-    }
+    public Kwiat() {}
 
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
     public String getNazwa() {
         return nazwa;
     }
-
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
     }
-
     public LocalDateTime getRokOdkrycia() {
         return rokOdkrycia;
     }
-
     public void setRokOdkrycia(LocalDateTime rokOdkrycia) {
         this.rokOdkrycia = rokOdkrycia;
     }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nazwa;
     private LocalDateTime rokOdkrycia;
 

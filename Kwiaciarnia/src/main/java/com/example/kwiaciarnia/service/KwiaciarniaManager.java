@@ -13,24 +13,19 @@ import java.util.Optional;
 @Service
 public class KwiaciarniaManager {
     private IKwiatyRepo iKwiatyRepo;
-
     @Autowired
     public KwiaciarniaManager(IKwiatyRepo iKwiatyRepo) {
         this.iKwiatyRepo = iKwiatyRepo;
     }
-
-
     public Optional<Kwiat> findById(Long id){
         return iKwiatyRepo.findById(id);
     }
     public Iterable<Kwiat> findAll() {
         return iKwiatyRepo.findAll();
     }
-
     public Kwiat addKwiat(Kwiat kwiat) {
         return iKwiatyRepo.save(kwiat);
     }
-
     public void deleteById(Long id) {
         iKwiatyRepo.deleteById(id);
     }
